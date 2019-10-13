@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageZoomer" customModule="AssignmentMV" customModuleProvider="target">
+            <connections>
+                <outlet property="collectinview" destination="G1h-RG-PSY" id="H0w-t6-tyg"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="DsD-ix-lyb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-RG-PSY">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Rw-1q-gRA">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="2JC-CS-SB1"/>
+                        <outlet property="delegate" destination="-1" id="pFK-N4-ejo"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQM-IP-08p">
+                    <rect key="frame" x="335" y="30" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="850-oR-eKX"/>
+                        <constraint firstAttribute="height" constant="30" id="EDS-AV-xku"/>
+                    </constraints>
+                    <state key="normal" image="cancel"/>
+                    <connections>
+                        <action selector="btnCancel:" destination="-1" eventType="touchUpInside" id="qEj-wf-G7u"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G1h-RG-PSY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5eP-ar-0et"/>
+                <constraint firstItem="G1h-RG-PSY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dd1-8c-w9L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="G1h-RG-PSY" secondAttribute="trailing" id="YBi-2Q-hMi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PQM-IP-08p" secondAttribute="trailing" constant="10" id="h3b-Ka-qpf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="G1h-RG-PSY" secondAttribute="bottom" id="i9t-k3-q4i"/>
+                <constraint firstItem="PQM-IP-08p" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="uDO-k5-SnA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel" width="368.6400146484375" height="368.6400146484375"/>
+    </resources>
+</document>
